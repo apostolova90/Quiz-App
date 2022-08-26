@@ -1,0 +1,100 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded;
+}
+
+/* HSL stands for hue, saturation, and lightness. */
+/* Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.*/
+/* Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.*/
+/* Lightness is also a percentage, 0% is black, 50% is neither light or dark, 100% is white*/
+/* https://www.w3schools.com/css/css_colors_hsl.asp */
+:root {
+  --hue-neutral: 273;
+  --hue-wrong: 0;
+  --hue-correct: 100;
+}
+
+body {
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--hue), 42%, 50%);
+  font-weight: bold;
+  font-size: 17px;
+}
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.container {
+  width: 800px;
+  max-width: 82%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 7px;
+  margin: 15px 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  border: 2px solid hsl(var(--hue), 100%, 35%);
+  background-color: hsl(var(--hue), 100%, 60%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: black;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.start-button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.next-button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 7px 17px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
