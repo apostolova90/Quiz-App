@@ -120,7 +120,7 @@ const questions = [
   {
     question: 'Which word can be placed before bottle, bell and bird?',
     answers: [
-      { text: 'Balck', correct: false },
+      { text: 'Black', correct: false },
       { text: 'Yellow', correct: false },
       { text: 'Green', correct: false },
       { text: 'Blue', correct: true }
